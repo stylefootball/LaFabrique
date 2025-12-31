@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>La Fabrique</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+:root {
+  --white: #ffffff;
+  --black: #111111;
+  --gold: #c9a24d;
+  --red: #b30000;
+  --gray: #777777;
+}
+
+body { margin:0; font-family:Arial,sans-serif; background:var(--white); color:var(--black); }
+
+/* HEADER */
+header { border-bottom:2px solid var(--red); padding:20px 40px; display:flex; justify-content:space-between; align-items:center; }
+.logo { border:2px solid var(--red); padding:10px 18px; font-size:22px; font-weight:bold; text-decoration:none; color:var(--black); }
+nav a { margin-left:30px; text-decoration:none; color:var(--black); font-weight:500; }
+
+/* HERO */
+.hero { padding:80px 40px; text-align:center; }
+.hero h1 { font-size:48px; margin-bottom:20px; }
+.hero span { color:var(--gold); }
+.hero p { max-width:600px; margin:auto; font-size:18px; opacity:0.8; }
+
+/* BOX PRODUITS */
+.section { padding:60px 40px; }
+.section h2 { text-align:center; font-weight:400; letter-spacing:2px; color:var(--black); }
+.section h2::after { content:""; display:block; width:50px; height:2px; background:var(--gold); margin:18px auto 0; }
+
+.offer { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:40px; margin-top:50px; }
+.box { background:var(--white); border:2px solid var(--black); padding:40px 30px; text-align:center; transition:0.4s; }
+.box:hover { border-color:var(--gold); }
+.box span { font-size:12px; letter-spacing:2px; color:var(--gold); }
+.box h3 { margin:20px 0 15px; font-weight:500; color:var(--black); }
+.box p { font-size:15px; color:var(--gray); line-height:1.6; }
+.btn { display:inline-block; margin-top:20px; padding:14px 32px; background:var(--black); color:var(--white); text-decoration:none; font-weight:600; border:2px solid var(--gold); transition:0.3s; }
+.btn:hover { background:var(--gold); color:var(--black); }
+
+/* FOOTER */
+footer { border-top:2px solid var(--red); padding:30px; text-align:center; margin-top:60px; }
+</style>
+</head>
+
+<body>
+
+<header>
+  <a href="index.html" class="logo">LaFabrique</a>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="produits.html">Produits</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Transforme ton avenir avec <span>La Fabrique</span></h1>
+  <p>Ebook, formations vidéo et coaching premium pour une réussite digitale complète.</p>
+</section>
+
+<section class="section">
+  <h2>Nos Produits</h2>
+  <div class="offer">
+
+    <!-- Ebook -->
+    <div class="box">
+      <span>EBOOK</span>
+      <h3>Clarté & Vision</h3>
+      <p>Une base solide pour structurer ta réflexion et prendre les bonnes décisions.</p>
+      <a href="https://buy.stripe.com/bJe28rdvIggLfgB4XI0x200" class="btn">Acheter maintenant</a>
+    </div>
+
+    <!-- Formation Vidéo -->
+    <div class="box">
+      <span>FORMATION VIDÉO</span>
+      <h3>Exécution précise</h3>
+      <p>Des modules vidéo premium pour transformer la théorie en résultats concrets.</p>
+      <a href="produits.html#formation-video" class="btn">Voir le produit</a>
+    </div>
+
+    <!-- Coaching Privé -->
+    <div class="box">
+      <span>COACHING PRIVÉ</span>
+      <h3>Accompagnement élite</h3>
+      <p>Un suivi humain, personnalisé et limité pour garantir la qualité.</p>
+      <a href="produits.html#coaching-prive" class="btn">Voir le produit</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2025 La Fabrique — Paiement sécurisé Stripe
+</footer>
+
+</body>
+</html>
