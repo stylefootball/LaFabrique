@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Nos Produits - La Fabrique</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+:root {
+  --white: #ffffff;
+  --black: #111111;
+  --gold: #c9a24d;
+  --red: #b30000;
+  --gray: #777777;
+}
+
+body { margin:0; font-family:Arial,sans-serif; background:var(--white); color:var(--black); }
+
+/* HEADER */
+header { border-bottom:2px solid var(--red); padding:20px 40px; display:flex; justify-content:space-between; align-items:center; }
+.logo { border:2px solid var(--red); padding:10px 18px; font-size:22px; font-weight:bold; text-decoration:none; color:var(--black); }
+nav a { margin-left:30px; text-decoration:none; color:var(--black); font-weight:500; }
+
+/* SECTION PRODUITS */
+.section { padding:60px 40px; }
+.section h2 { text-align:center; font-weight:400; letter-spacing:2px; color:var(--black); }
+.section h2::after { content:""; display:block; width:50px; height:2px; background:var(--gold); margin:18px auto 0; }
+
+.products-list { display:flex; flex-direction:column; gap:30px; max-width:800px; margin:50px auto; }
+
+.product-item { 
+  border:2px solid var(--black); 
+  padding:30px; 
+  background:var(--white); 
+  transition:0.4s; 
+  border-radius:8px; 
+}
+.product-item:hover { border-color:var(--gold); }
+
+.product-item h3 { margin:0 0 10px; font-weight:500; color:var(--black); }
+.product-item p { color:var(--gray); line-height:1.6; }
+.product-item a.btn { margin-top:15px; }
+
+/* FOOTER */
+footer { border-top:2px solid var(--red); padding:30px; text-align:center; margin-top:60px; }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">LaFabrique</a>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="produits.html">Produits</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<section class="section">
+  <h2 id="nos-produits">Nos Produits</h2>
+  <div class="products-list">
+
+    <div class="product-item" id="ebook">
+      <h3>Clarté & Vision (Ebook)</h3>
+      <p>Une base solide pour structurer ta réflexion et prendre les bonnes décisions.</p>
+      <a href="https://buy.stripe.com/bJe28rdvIggLfgB4XI0x200" class="btn">Acheter maintenant</a>
+    </div>
+
+    <div class="product-item" id="formation-video">
+      <h3>Exécution Précise (Formation vidéo)</h3>
+      <p>Des modules vidéo premium pour transformer la théorie en résultats concrets.</p>
+      <a href="#" class="btn">En savoir plus</a>
+    </div>
+
+    <div class="product-item" id="coaching-prive">
+      <h3>Accompagnement Élite (Coaching)</h3>
+      <p>Un suivi humain, personnalisé et limité pour garantir la qualité.</p>
+      <a href="#" class="btn">Réserver maintenant</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2025 La Fabrique — Paiement sécurisé Stripe
+</footer>
+
+</body>
+</html>
