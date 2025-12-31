@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact — Style Football</title>
+
+<style>
+:root {
+  --white: #ffffff;
+  --black: #111111;
+  --gold: #c9a24d;
+  --red: #b30000;
+  --gray: #777777;
+}
+
+body {
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:var(--white);
+  color:var(--black);
+}
+
+/* ===== HEADER ===== */
+header {
+  border-bottom:2px solid var(--red);
+  padding:20px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:relative;
+}
+
+.logo {
+  border:2px solid var(--red);
+  padding:10px 18px;
+  font-size:22px;
+  font-weight:bold;
+  text-decoration:none;
+  color:var(--black);
+}
+
+nav {
+  display:flex;
+}
+
+nav a,
+nav a:visited {
+  margin-left:30px;
+  text-decoration:none;
+  color:var(--black);
+  font-weight:500;
+}
+
+nav a:hover {
+  color:var(--red);
+}
+
+/* MENU MOBILE */
+.menu-toggle {
+  display:none;
+  font-size:26px;
+  cursor:pointer;
+}
+
+@media (max-width:768px) {
+  nav {
+    display:none;
+    position:absolute;
+    top:80px;
+    right:40px;
+    background:var(--white);
+    border:2px solid var(--black);
+    padding:20px;
+    flex-direction:column;
+    gap:15px;
+  }
+
+  nav a {
+    margin:0;
+  }
+
+  .menu-toggle {
+    display:block;
+  }
+}
+
+/* ===== SECTION CONTACT ===== */
+.section {
+  padding:70px 40px;
+  text-align:center;
+}
+
+.section h2 {
+  font-weight:400;
+  letter-spacing:2px;
+}
+
+.section h2::after {
+  content:"";
+  display:block;
+  width:50px;
+  height:2px;
+  background:var(--gold);
+  margin:18px auto 0;
+}
+
+.contact-box {
+  max-width:500px;
+  margin:50px auto 0;
+  display:flex;
+  flex-direction:column;
+  gap:25px;
+}
+
+/* BOUTONS / LIENS */
+.btn,
+.btn:visited {
+  display:block;
+  padding:14px;
+  border:2px solid var(--gold);
+  background:var(--black);
+  color:var(--white);
+  text-decoration:none;
+  transition:0.3s;
+  font-weight:500;
+}
+
+.btn:hover {
+  background:var(--gold);
+  color:var(--black);
+}
+
+/* ICONES */
+.socials {
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  margin-top:10px;
+}
+
+.socials a img {
+  width:48px;
+  height:48px;
+  transition:0.3s;
+}
+
+.socials a:hover img {
+  transform:scale(1.1);
+}
+
+/* FOOTER */
+footer {
+  border-top:2px solid var(--red);
+  padding:30px;
+  text-align:center;
+  margin-top:80px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a href="index.html" class="logo">Style Football</a>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <nav id="nav-menu">
+    <a href="index.html">Accueil</a>
+    <a href="produits.html">Produits</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="section">
+  <h2>Contact</h2>
+
+  <div class="contact-box">
+
+    <!-- Réseaux sociaux -->
+    <div class="socials">
+      <!-- TikTok -->
+      <a href="https://www.tiktok.com/@bystylefoot" target="_blank">
+        <img src="tiktok.png" alt="TikTok">
+      </a>
+
+      <!-- Snapchat -->
+      <a href="https://www.snapchat.com/add/style_foot" target="_blank">
+        <img src="snapchat.png" alt="Snapchat">
+      </a>
+
+      <!-- YouTube (à venir) -->
+      <a href="#" title="YouTube bientôt disponible">
+        <img src="youtube.png" alt="YouTube">
+      </a>
+    </div>
+
+    <!-- Email -->
+    <a href="mailto:contact.style.football@gmail.com" class="btn">
+      Envoyer un email
+    </a>
+
+  </div>
+</section>
+
+<footer>
+  © 2025 Style Football — Tous droits réservés
+</footer>
+
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("nav-menu");
+  menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+}
+</script>
+
+</body>
+</html>
